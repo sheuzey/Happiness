@@ -7,28 +7,50 @@
 //
 
 #import "HappinessViewController.h"
+#import "FaceView.h"
 
-@interface HappinessViewController ()
-
+@interface HappinessViewController () <FaceViewDataSource>
+@property (nonatomic, weak) IBOutlet FaceView *faceView;
 @end
 
 @implementation HappinessViewController
 
-- (void)viewDidLoad
+@synthesize happiness = _happiness;
+@synthesize faceView = _faceView;
+
+- (void)setHappiness:(int)happiness
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    _happiness = happiness;
+    [self.faceView setNeedsDisplay];    //any time our Model changes, redraw our View
 }
 
-- (void)viewDidUnload
+- (void) setFaceView:(FaceView *)faceView
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    _faceView = faceView;
+    //enable pinch gestures in the FaceView using its pinch: handler
+    [self.faceView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self.faceView action:@selector(pinch:)]];
+    [self.faceView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleHappinessGesture:)]];
+
+    self.faceView.dataSource = self;
+}
+- (void)handleHappinessGesture:(UIPanGestureRecognizer *)gesture
+{
+    if((gesture.state == UIGestureRecognizerStateChanged) ||
+       (gesture.state == UIGestureRecognizerStateEnded)) {
+           CGPoint translation = [gesture translationInView:self.faceView];
+           self.happiness -= translation.y / 2;
+        [gesture setTranslation:CGPointZero inView:self.faceView];
+       }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (float)smileForFaceView:(FaceView *)sender
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (self.happiness - 50) / 50.0; // models happiness is 0-100...the smilyness is -1 to 1...need to convert
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES; //support all orientations
 }
 
 @end

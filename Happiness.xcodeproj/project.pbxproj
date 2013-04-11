@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCAA06B7160B8B19008EF60A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCAA06B6160B8B19008EF60A /* Default-568h@2x.png */; };
 		DCEBC189160A9C7E00479F69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBC188160A9C7E00479F69 /* UIKit.framework */; };
 		DCEBC18B160A9C7E00479F69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBC18A160A9C7E00479F69 /* Foundation.framework */; };
 		DCEBC18D160A9C7E00479F69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBC18C160A9C7E00479F69 /* CoreGraphics.framework */; };
@@ -15,9 +16,11 @@
 		DCEBC199160A9C7E00479F69 /* HappinessAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBC198160A9C7E00479F69 /* HappinessAppDelegate.m */; };
 		DCEBC19C160A9C7E00479F69 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEBC19A160A9C7E00479F69 /* MainStoryboard.storyboard */; };
 		DCEBC19F160A9C7E00479F69 /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBC19E160A9C7E00479F69 /* HappinessViewController.m */; };
+		DCEBC1A7160A9D7600479F69 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBC1A6160A9D7600479F69 /* FaceView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCAA06B6160B8B19008EF60A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DCEBC184160A9C7E00479F69 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEBC188160A9C7E00479F69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DCEBC18A160A9C7E00479F69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,6 +34,8 @@
 		DCEBC19B160A9C7E00479F69 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DCEBC19D160A9C7E00479F69 /* HappinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
 		DCEBC19E160A9C7E00479F69 /* HappinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
+		DCEBC1A5160A9D7600479F69 /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		DCEBC1A6160A9D7600479F69 /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 		DCEBC179160A9C7E00479F69 = {
 			isa = PBXGroup;
 			children = (
+				DCAA06B6160B8B19008EF60A /* Default-568h@2x.png */,
 				DCEBC18E160A9C7E00479F69 /* Happiness */,
 				DCEBC187160A9C7E00479F69 /* Frameworks */,
 				DCEBC185160A9C7E00479F69 /* Products */,
@@ -82,6 +88,8 @@
 				DCEBC19A160A9C7E00479F69 /* MainStoryboard.storyboard */,
 				DCEBC19D160A9C7E00479F69 /* HappinessViewController.h */,
 				DCEBC19E160A9C7E00479F69 /* HappinessViewController.m */,
+				DCEBC1A5160A9D7600479F69 /* FaceView.h */,
+				DCEBC1A6160A9D7600479F69 /* FaceView.m */,
 				DCEBC18F160A9C7E00479F69 /* Supporting Files */,
 			);
 			path = Happiness;
@@ -152,6 +160,7 @@
 			files = (
 				DCEBC193160A9C7E00479F69 /* InfoPlist.strings in Resources */,
 				DCEBC19C160A9C7E00479F69 /* MainStoryboard.storyboard in Resources */,
+				DCAA06B7160B8B19008EF60A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +174,7 @@
 				DCEBC195160A9C7E00479F69 /* main.m in Sources */,
 				DCEBC199160A9C7E00479F69 /* HappinessAppDelegate.m in Sources */,
 				DCEBC19F160A9C7E00479F69 /* HappinessViewController.m in Sources */,
+				DCEBC1A7160A9D7600479F69 /* FaceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +290,7 @@
 				DCEBC1A4160A9C7E00479F69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
